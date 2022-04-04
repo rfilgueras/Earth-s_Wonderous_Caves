@@ -1,0 +1,17 @@
+﻿<Window x:Class="VirtualEcosystemTwo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VirtualEcosystemTwo"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="828"
+        Width="1396">
+    <DockPanel>
+        <Frame Name="NavigationFrame"
+               NavigationUIVisibility="Hidden"
+               Height="768"
+               Width="1366" />
+    </DockPanel>
+</Window>

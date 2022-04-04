@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59E610F4-C8CF-4F1B-B761-C8340B8E602B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VirtualEcosystemTwo</RootNamespace>
+    <AssemblyName>VirtualEcosystemTwo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>GameIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Environment.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Items\Brick.cs" />
+    <Compile Include="Items\CoolingSuit.cs" />
+    <Compile Include="Items\HerbalPotion.cs" />
+    <Compile Include="Items\Respirators.cs" />
+    <Compile Include="Items\Rope.cs" />
+    <Compile Include="Organism.cs" />
+    <Compile Include="Organisms\Bumblebee.cs" />
+    <Compile Include="Organisms\Fish.cs" />
+    <Compile Include="Organisms\Insect.cs" />
+    <Compile Include="Organisms\Mammal.cs" />
+    <Compile Include="Organisms\Microbe.cs" />
+    <Compile Include="Organisms\Plant.cs" />
+    <Compile Include="Organisms\Reptile.cs" />
+    <Compile Include="Pages\BasaltCavePage.xaml.cs">
+      <DependentUpon>BasaltCavePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CraftPage.xaml.cs">
+      <DependentUpon>CraftPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GreatBlueHolePage.xaml.cs">
+      <DependentUpon>GreatBlueHolePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InstructionsPage.xaml.cs">
+      <DependentUpon>InstructionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WaitomoCavePage.xaml.cs">
+      <DependentUpon>WaitomoCavePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="ReadInfo.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="Utility.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Game.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\BasaltCavePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CraftPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CrystalCavesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GameStartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GreatBlueHolePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InstructionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InventoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WaitomoCavePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\CrystalCavesPage.xaml.cs">
+      <DependentUpon>CrystalCavesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GameStartPage.xaml.cs">
+      <DependentUpon>GameStartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InventoryPage.xaml.cs">
+      <DependentUpon>InventoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Info\Resources.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Info\Organisms.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Info\Items.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\buttercup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\StartScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\craftBtnIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\inventoryBtnIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\lowerTempIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\raiseTempIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\mapBtnIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\explore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\playerIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\environmentLocations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\MapBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\interfaceBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\craftBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ItemImg\bricks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ItemImg\cloth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ItemImg\ductape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ItemImg\healthPotion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ItemImg\rope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\mysteryResource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\basalt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\crystal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\limestone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\stalactites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\stalagmites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Overlays\CaveCollapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Overlays\highTemp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Overlays\lowTemp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Overlays\playerDeathOverlay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Overlays\storm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\bubbleMicrobe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\bummblebee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\crystalBee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\GlowWorms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\Coral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\wildthyme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\crystalFlower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Info\Environments.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\GreatBlueHole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\WaitomoCaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\CrystalCaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\BasaltCave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\tempIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\honey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\lead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\genInterface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\activeMapIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\activeInventoryIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Icons\activeCraftIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\instructionsBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\wildgrass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\coolwater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\parrotFish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\ant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\OrganismImg\spider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ResourceImg\silk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ItemImg\suit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ItemImg\shelter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Backgrounds\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\ItemImg\plasticBottle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
